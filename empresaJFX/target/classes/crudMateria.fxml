@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.MateriaViewController">
+    <children>
+        <SplitPane dividerPositions="0.5159574468085106" orientation="VERTICAL" prefHeight="566.0" prefWidth="429.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="288.0" prefWidth="401.0">
+                    <children>
+                        <Pane layoutX="34.0" layoutY="16.0" prefHeight="255.0" prefWidth="360.0" style="-fx-border-image-width: 1px;">
+                            <effect>
+                                <Blend />
+                            </effect>
+                            <children>
+                                <Label layoutX="97.0" layoutY="1.0" text="Gestión Materias">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="23.0" layoutY="27.0" prefHeight="27.0" prefWidth="77.0" text="Nombre:">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="30.0" layoutY="65.0" text="Codigo:">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="3.0" layoutY="95.0" text="Total de horas:">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtNombre" layoutX="107.0" layoutY="28.0" prefHeight="25.0" prefWidth="194.0" />
+                                <TextField fx:id="txtCodigo" layoutX="107.0" layoutY="62.0" prefHeight="25.0" prefWidth="194.0" />
+                                <TextField fx:id="txtTotalHorasSemestre" layoutX="127.0" layoutY="96.0" prefHeight="25.0" prefWidth="194.0" />
+                                <Button fx:id="btbAgregarMateria" layoutX="35.0" layoutY="182.0" mnemonicParsing="false" onAction="#onAgregarMateria" text="Agregar materia" />
+                                <Button fx:id="btnActualizarMateria" layoutX="191.0" layoutY="182.0" mnemonicParsing="false" onAction="#onActualizarMateria" text="Actualizar materia" />
+                                <Label layoutX="27.0" layoutY="130.0" text="Creditos:">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtCreditos" layoutX="114.0" layoutY="130.0" prefHeight="25.0" prefWidth="194.0" />
+                            </children>
+                        </Pane>
+                  <Button fx:id="btbVolverPrincipal" layoutX="-1.0" mnemonicParsing="false" onAction="#onVolverPrincipal" prefHeight="11.0" prefWidth="70.0" text="Volver" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="271.0" prefWidth="645.0">
+                    <children>
+                        <TableView fx:id="tblListMaterias" layoutX="7.0" layoutY="7.0" prefHeight="206.0" prefWidth="412.0">
+                            <columns>
+                                <TableColumn fx:id="tbcNombre" prefWidth="152.59996700286865" text="Nombre" />
+                                <TableColumn fx:id="tbcCodigo" prefWidth="90.60000610351562" text="Codigo" />
+                                <TableColumn fx:id="tbcTotalHorasSemestre" prefWidth="100.20002746582031" text="Total de horas" />
+                                <TableColumn fx:id="tbcCreditos" prefWidth="74.199951171875" text="Creditos" />
+                            </columns>
+                        </TableView>
+                        <Button fx:id="btnLimpiar" layoutX="35.0" layoutY="223.0" mnemonicParsing="false" onAction="#onLimpiar" prefHeight="25.0" prefWidth="106.0" text="Limpiar" />
+                        <Button fx:id="btnEliminar" layoutX="304.0" layoutY="223.0" mnemonicParsing="false" onAction="#onEliminar" prefHeight="25.0" prefWidth="97.0" text="Eliminar" />
+                        <Button fx:id="btnLimpiarLista" layoutX="169.0" layoutY="223.0" mnemonicParsing="false" onAction="#onLimpiarLista" prefHeight="25.0" prefWidth="106.0" text="Limpiar lista" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
